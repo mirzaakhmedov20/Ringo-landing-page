@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 body {
   font-family: "Raleway", sans-serif;
@@ -10,9 +12,38 @@ body {
   width: 1600px;
   margin: 0 auto;
 }
+nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+nav > img {
+  margin: 20px 200px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  color: #282b22;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+}
+.phone {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
 .card_1 {
   width: 1600px;
-  background: url(../picture/bg.png) no-repeat;
+  background: url(../img/bg.png),
+    linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) -13.19%,
+        rgba(0, 0, 0, 0.85) 94.01%
+      )
+      no-repeat;
   padding: 120px 200px 45px 200px;
   display: flex;
   flex-direction: column;
@@ -27,7 +58,7 @@ body {
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%; /* 67.2px */
+  line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -38,7 +69,7 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 150%; /* 27px */
+  line-height: 150%;
   margin-bottom: 50px;
 }
 .card_1_btn {
@@ -48,12 +79,11 @@ body {
   border: none;
   cursor: pointer;
   margin-bottom: 120px;
-
   color: #fff;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 16px */
+  line-height: 100%;
   transition: all;
 }
 .card_1_btn:hover {
@@ -65,7 +95,7 @@ body {
   background: #a78358;
   transition: all 0.1s;
 }
-.navigatiion {
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +143,7 @@ body {
   font-size: 46px;
   font-style: normal;
   font-weight: 600;
-  line-height: 125%; /* 57.5px */
+  line-height: 125%;
   text-transform: uppercase;
   padding-top: 140px;
   margin-bottom: 80px;
@@ -128,14 +158,14 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%; /* 24px */
+  line-height: 100%;
 }
 .box h4 {
   color: #3d4a39;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%; /* 24px */
+  line-height: 100%;
   margin-top: 60px;
   margin-bottom: 54px;
 }
@@ -155,7 +185,7 @@ body {
   font-size: 46px;
   font-style: normal;
   font-weight: 600;
-  line-height: 125%; /* 57.5px */
+  line-height: 125%;
   text-transform: uppercase;
   margin-bottom: 70px;
 }
@@ -175,7 +205,7 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 31.2px */
+  line-height: 130%;
   opacity: 0.5;
 }
 .lamps {
@@ -189,17 +219,18 @@ body {
   flex-direction: column;
 }
 .lamp span {
+  opacity: 0.5;
   color: #fff;
   text-align: center;
   font-size: 24px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 31.2px */
-  opacity: 0.5;
+  line-height: 130%;
 }
 .gift {
   width: 278px;
 }
+
+/* Desctop responsive */
 
 @media screen and (max-width: 1005px) {
   .container {
@@ -208,9 +239,9 @@ body {
   .card_1 {
     width: 1000px;
     padding: 120px 20px 45px 20px;
-    background-image: url(../picture/bg_tablet.png);
+    background-image: url(../img/bg_tablet.png);
   }
-  .navigatiion {
+  .navigation {
     width: 960px;
   }
   .bg_1 {
@@ -242,13 +273,16 @@ body {
     padding: 100px 60px 100px 99px;
   }
 }
+
+/* Tablet responsive */
+
 @media screen and (max-width: 640px) {
   .card_1 {
     width: 640px;
     padding: 120px 20px 45px 20px;
-    background-image: url(../picture/bg_640w.png);
+    background-image: url(../img/bg_640w.png);
   }
-  .navigatiion {
+  .navigation {
     width: 600px;
   }
   .card_2 {
@@ -261,7 +295,7 @@ body {
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 45px */
+    line-height: 125%;
     text-transform: uppercase;
   }
   .box {
@@ -281,7 +315,7 @@ body {
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
-    line-height: 125%; /* 45px */
+    line-height: 125%;
     text-transform: uppercase;
   }
   .card_3 {
@@ -293,7 +327,7 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 130%; /* 23.4px */
+    line-height: 130%;
   }
   .gaz {
     width: 118px;
@@ -303,13 +337,15 @@ body {
   }
 }
 
+/* Phone responsive */
+
 @media screen and (max-width: 320px) {
   .card_1 {
     width: 320px;
     padding: 70px 10px 15px 10px;
-    background-image: url(../picture/bg_320w.png);
+    background-image: url(../img/bg_320w.png);
   }
-  .navigatiion {
+  .navigation {
     width: 300px;
     display: flex;
     justify-content: center;
@@ -325,7 +361,7 @@ body {
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; /* 33.6px */
+    line-height: 120%;
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 28px;
@@ -337,7 +373,7 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 145%; /* 23.2px */
+    line-height: 145%;
     opacity: 0.8;
     margin: 0;
     margin-bottom: 30px;
@@ -371,7 +407,6 @@ body {
   .bg_3 {
     width: 300px;
   }
-
   .card_3 {
     width: 320px;
     padding: 80px 10px 80px 16px;
@@ -383,10 +418,9 @@ body {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 135%; /* 32.4px */
+    line-height: 135%;
     text-transform: uppercase;
   }
-
   .windows {
     display: flex;
     align-items: center;
